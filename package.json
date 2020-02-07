@@ -1,0 +1,98 @@
+{
+  "name": "kylantis_studio",
+  "version": "1.0.0",
+  "description": "Kylantis Studio",
+  "author": "Kylantis, Inc",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tonyobanon/kylantis-studio.git"
+  },
+  "private": true,
+  "homepage": "https://studio.kylantis.com/",
+  "scripts": {
+    "install-deps": "npm install && npm install --only=dev",
+    "start": "nodemon server/index.js",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "lint": "eslint --ext js --fix server/ client/src/ client/gulp-tasks/",
+    "pretest": "npm run lint",
+    "test": "jest --runInBand --forceExit --coverage"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "gulp-w3c-html-validator": "^1.4.4",
+    "node-notifier": "^5.4.3",
+    "through2": "^3.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-multistream": "^0.1.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rtlcss": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "browserify": "^16.5.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-filter": "^6.0.0",
+    "gulplog": "^1.0.0",
+    "normalize-scss": "7.0.1",
+    "restify": "^8.4.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "merge-stream": "^2.0.0",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-private-methods": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ],
+  "jest": {
+    "verbose": true,
+    "forceExit": true,
+    "collectCoverage": false,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testEnvironment": "browser"
+  }
+}

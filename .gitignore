@@ -1,0 +1,10 @@
+node_modules/
+.env
+
+# Generated client files
+client/app-assets/css
+client/app-assets/css-rtl
+client/app-assets/js
+
+
+client/assets/css

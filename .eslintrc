@@ -1,0 +1,13 @@
+{
+  "extends": "plutotv",
+  "globals": {
+    "rootRequire": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-restricted-syntax": "off"
+  }
+}
